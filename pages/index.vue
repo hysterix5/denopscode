@@ -18,6 +18,7 @@
       router.push('/main');
     }, 5000);
   });
+  
   </script>
   
   <style scoped>

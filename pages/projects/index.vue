@@ -1,5 +1,5 @@
 <template>
-    <div class="text-center pt-24 font-figtree animate-fade-up">
+    <div class="text-center pt-24 font-figtree animate-fade-up pb-20">
       <h1 class="text-6xl mb-12">PROJECTS</h1>
       <div class="block max-w-sm p-6 border border-gray-300 rounded-lg shadow-xl hover:bg-white hover:transition-transform duration-300 hover:scale-105 mx-auto">
         <NuxtLink to="/projects/votivate">

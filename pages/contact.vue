@@ -1,5 +1,5 @@
 <template>
-    <div class="font-figtree px-4 md:px-12 lg:px-24 animate-fade-up">
+    <div class="font-figtree px-4 md:px-12 lg:px-24 animate-fade-up pb-16">
       <h1 class="my-12 font-bold text-6xl">
         I CAN BE REACHED USING THESE DETAILS:
       </h1>
