@@ -1,62 +1,53 @@
 <template>
-    <div class="mt-32 animate-fade-up">
-        <div class="relative overflow-hidden w-full">
+  <div class="xl:mt-48 md:mt-24 lg:mt-12 animate-fade-up">
+    <!-- Carousel Container -->
+    <div class="relative overflow-hidden w-full mx-4 sm:mx-6 md:mx-8 lg:mx-12 xl:mx-16">
       <div 
         class="flex transition-transform duration-500 ease-in-out"
         :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
       >
         <!-- Slide 1 -->
-        <div class="flex justify-center w-full flex-shrink-0 px-2">
-          <div class="w-1/2 p-2 space-y-6">
-            <div class="flex">
-                <p class="tracking-wide text-6xl font-figtree font-bold">{{ greeting }}</p>
-                <div @click="changeGreeting" class="animate-jump animate-infinite animate-duration-[3000ms] flex">
-                    <Icon name="game-icons:click" style="width: 25px; height: 25px;" class="text-gray-400" />
-                    <p class="font-xs font-figtree text-gray-400 hover:cursor-pointer">Click to translate!</p>
-                </div>
+        <div class="flex flex-col md:flex-row justify-center w-full flex-shrink-0 px-2">
+          <div class="w-full md:w-1/2 p-2 space-y-6">
+            <div class="flex flex-col md:flex-row items-start md:items-center">
+              <p class="tracking-wide text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-figtree font-bold">{{ greeting }}</p>
+              <div @click="changeGreeting" class="animate-jump animate-infinite animate-duration-[3000ms] flex mt-2">
+                <Icon name="game-icons:click" style="width: 25px; height: 25px;" class="text-gray-400" />
+                <p class="font-xs font-figtree text-gray-400 hover:cursor-pointer ml-2">Click to translate!</p>
+              </div>
             </div>
-            <p class="text-2xl">My name is <span class="font-bold">Joseph Mel Resty Denopol.</span></p>
-            <p class="text-2xl">An Aspiring Web and Mobile Developer at your service!</p>
+            <p class="text-base sm:text-lg md:text-xl lg:text-2xl">My name is <span class="font-bold">Joseph Mel Resty Denopol.</span></p>
+            <p class="text-base sm:text-lg md:text-xl lg:text-2xl">An Aspiring Web and Mobile Developer at your service!</p>
           </div>
-          <div class="p-2">
-            <NuxtImg src="/img/seph3.png" class="w-auto object-contain" style="height: 400px;" width="400px"/>
+          <div class="w-full md:w-1/2 p-2 flex items-center justify-center">
+            <NuxtImg src="/img/seph3.png" class="w-full h-auto object-contain" style="max-height: 400px;" />
           </div>
         </div>
         
         <!-- Slide 2 -->
-        <div class="flex justify-center w-full flex-shrink-0 px-2"> 
-          <div class="w-1/2 p-2 space-y-6"> 
-            <p class="tracking-wide text-6xl font-figtree font-bold">About Me</p>
-            <p class="text-xl">Born and Raised from the peaceful and beautiful City of Davao, Philippines.</p>
-            <p class="text-xl">I am a Web Developer specializing in full-stack development.</p>
-            <p class="text-xl">I am also a Mobile Developer that mainly utilize Flutter</p>
+        <div class="flex flex-col md:flex-row justify-center w-full flex-shrink-0 px-2"> 
+          <div class="w-full md:w-1/2 p-2 space-y-6"> 
+            <p class="tracking-wide text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-figtree font-bold">About Me</p>
+            <p class="text-base sm:text-lg md:text-xl lg:text-xl">Born and Raised from the peaceful and beautiful City of Davao, Philippines.</p>
+            <p class="text-base sm:text-lg md:text-xl lg:text-xl">I am a Web Developer specializing in full-stack development.</p>
+            <p class="text-base sm:text-lg md:text-xl lg:text-xl">I am also a Mobile Developer that mainly utilizes Flutter.</p>
           </div>
-          <div class=" p-2">
-            <NuxtImg src="/img/davao.jpg" class="w-auto" style="height: 400px; width: 650px;"/>
+          <div class="w-full md:w-1/2 p-2 flex items-center justify-center">
+            <NuxtImg src="/img/davao.jpg" class="w-full h-auto object-cover" style="max-height: 400px;" />
           </div>
         </div>
     
         <!-- Slide 3 -->
-        <div class="flex justify-center w-full flex-shrink-0 px-2">
-          <div class="w-1/2 p-2 space-y-6">
-            <p class="tracking-wide text-6xl font-figtree font-bold">Technical Background</p>
-            <p class="text-xl mb-0">For Web Development, I utilize Laravel as my choice of Back-end and Vue.js or Nuxt.js (A Vue.js Framework) as my Front-end.</p>
-            <p class="text-xl mb-0">In Mobile Development, I use Flutter framework and Firebase as its Back-end.</p>
+        <div class="flex flex-col md:flex-row justify-center w-full flex-shrink-0 px-2">
+          <div class="w-full md:w-1/2 p-2 space-y-6">
+            <p class="tracking-wide text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-figtree font-bold">Technical Background</p>
+            <p class="text-base sm:text-lg md:text-xl lg:text-xl mb-0">For Web Development, I utilize Laravel as my choice of Back-end and Vue.js or Nuxt.js (A Vue.js Framework) as my Front-end.</p>
+            <p class="text-base sm:text-lg md:text-xl lg:text-xl mb-0">In Mobile Development, I use Flutter framework and Firebase as its Back-end.</p>
           </div>
-          <div class="p-2">
-            <img src="/img/logos.png" alt="Slide 3 Image" class="w-full h-auto rounded-lg">
+          <div class="w-full md:w-1/2 p-2 flex items-center justify-center">
+            <img src="/img/logos.png" alt="Technical Background" class="w-full h-auto object-contain" style="max-height: 400px;" />
           </div>
         </div>
-      </div>
-  
-      <!-- Navigation Buttons -->
-      <div class="absolute top-1/2 w-full flex justify-between transform -translate-y-1/2 px-4">
-        <button @click="prevSlide" class="bg-white rounded-full p-2 shadow-lg hover:bg-gray-200">
-          &#10094;
-        </button>
-        <button @click="nextSlide" class="bg-white rounded-full p-2 shadow-lg hover:bg-gray-200">
-          &#10095;
-        </button>
       </div>
   
       <!-- Indicators -->
@@ -65,11 +56,21 @@
           v-for="(item, index) in slides" 
           :key="index"
           :class="{'bg-rich-black': currentSlide === index, 'bg-gray-300': currentSlide !== index }"
-          class="w-3 h-3 rounded-full"
+          class="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-3 md:h-3 lg:w-3 lg:h-3 rounded-full"
         ></button>
       </div>
     </div>
+
+    <!-- Navigation Buttons Outside Carousel -->
+    <div class="flex justify-between px-4 sm:px-6 md:px-8 lg:px-12 mt-4">
+      <button @click="prevSlide" class="bg-white rounded-full p-3 shadow-lg hover:bg-gray-200">
+        &#10094;
+      </button>
+      <button @click="nextSlide" class="bg-white rounded-full p-3 shadow-lg hover:bg-gray-200">
+        &#10095;
+      </button>
     </div>
+  </div>
 </template>
 
 <script>
@@ -93,7 +94,7 @@ export default {
     },
   },
   mounted() {
-      setInterval(this.nextSlide, 10000);
-    }
+    setInterval(this.nextSlide, 10000);
+  }
 };
 </script>
